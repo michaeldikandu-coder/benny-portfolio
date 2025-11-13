@@ -1,0 +1,143 @@
+.experience {
+  background: var(--gray);
+}
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: 3rem;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.6s ease;
+}
+
+.timelineItem.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.timelineDot {
+  position: absolute;
+  left: -2.5rem;
+  top: 0.5rem;
+  width: 12px;
+  height: 12px;
+  background: var(--white);
+  border-radius: 50%;
+  border: 3px solid var(--gray);
+  transition: all 0.3s;
+}
+
+.timelineItem:hover .timelineDot {
+  transform: scale(1.5);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.timelineContent {
+  background: var(--black);
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s;
+}
+
+.timelineContent:hover {
+  border-color: var(--white);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+}
+
+.timelineHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.timelineHeader h3 {
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.5px;
+}
+
+.timelineHeader h4 {
+  font-size: 1.1rem;
+  margin: 0;
+  opacity: 0.8;
+  font-weight: 400;
+}
+
+.period {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  white-space: nowrap;
+}
+
+.description {
+  opacity: 0.9;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.achievements {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.achievements li {
+  padding-left: 1.5rem;
+  position: relative;
+  opacity: 0.85;
+  line-height: 1.6;
+}
+
+.achievements li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--white);
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 1.5rem;
+  }
+  
+  .timelineDot {
+    left: -2rem;
+  }
+  
+  .timelineContent {
+    padding: 1.5rem;
+  }
+  
+  .timelineHeader {
+    flex-direction: column;
+  }
+  
+  .period {
+    align-self: flex-start;
+  }
+}
