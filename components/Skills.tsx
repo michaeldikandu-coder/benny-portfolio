@@ -4,10 +4,13 @@ import { useEffect, useRef, useState } from 'react'
 import styles from './Skills.module.css'
 
 const skills = [
-  { icon: '{ }', title: 'Frontend', description: 'React, ReactNative, TypeScript' },
-  { icon: '⚙', title: 'Backend', description: 'Next.js, C#, Java' },
+  { icon: '{ }', title: 'Frontend', description: 'React, ReactNative, TypeScript, CSS' },
+  { icon: '⚙', title: 'Backend', description: 'Next.js, Node.js, C#, Java' },
   { icon: '☁', title: 'Cloud', description: 'AWS, Azure, Docker' },
   { icon: '⚡', title: 'Architecture', description: 'Microservices, APIs' },
+  { icon: '📱', title: 'Languages', description: 'JavaScript, TypeScript, C#, Java' },
+  { icon: '🛠', title: 'Frameworks', description: 'React.js, Next.js, Node.js' },
+  { icon: '⛓', title: 'Web3', description: 'Sui Move, Blockchain, Smart Contracts' },
 ]
 
 export default function Skills() {

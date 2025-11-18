@@ -39,8 +39,41 @@
 
 .contactIcon {
   font-size: 2rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .contactText {
   font-size: 1.1rem;
+  word-break: break-word;
+}
+
+@media (max-width: 768px) {
+  .contactCard {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+  
+  .contactIcon {
+    font-size: 1.5rem;
+  }
+  
+  .contactText {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactCard {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .contactText {
+    font-size: 0.9rem;
+  }
 }

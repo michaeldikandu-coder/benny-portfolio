@@ -75,9 +75,24 @@
   opacity: 0.9;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 968px) {
   .aboutContent {
     grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .codeSnippet {
+    padding: 1.5rem;
+  }
+  
+  .codeSnippet pre {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutContent {
+    gap: 2rem;
   }
   
   .imageContainer {
@@ -88,7 +103,27 @@
     max-width: 250px;
   }
   
+  .codeSnippet {
+    padding: 1rem;
+  }
+  
   .codeSnippet pre {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
+    line-height: 1.6;
+    overflow-x: auto;
+  }
+  
+  .aboutText {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .codeSnippet pre {
+    font-size: 0.65rem;
+  }
+  
+  .aboutImage {
+    max-width: 200px;
   }
 }

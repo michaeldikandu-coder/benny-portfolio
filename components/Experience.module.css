@@ -120,6 +120,17 @@
   font-size: 1.2rem;
 }
 
+@media (max-width: 968px) {
+  .timelineHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .period {
+    align-self: flex-start;
+  }
+}
+
 @media (max-width: 768px) {
   .timeline {
     padding-left: 1.5rem;
@@ -127,17 +138,42 @@
   
   .timelineDot {
     left: -2rem;
+    width: 10px;
+    height: 10px;
   }
   
   .timelineContent {
     padding: 1.5rem;
   }
   
-  .timelineHeader {
-    flex-direction: column;
+  .timelineHeader h3 {
+    font-size: 1.3rem;
+  }
+  
+  .timelineHeader h4 {
+    font-size: 1rem;
+  }
+  
+  .timelineItem {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline {
+    padding-left: 1rem;
+  }
+  
+  .timelineDot {
+    left: -1.5rem;
+  }
+  
+  .timelineContent {
+    padding: 1rem;
   }
   
   .period {
-    align-self: flex-start;
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
   }
 }

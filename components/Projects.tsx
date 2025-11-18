@@ -1,6 +1,8 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import { HiGlobe, HiCode } from 'react-icons/hi'
+import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
 import styles from './Projects.module.css'
 
 const projects = [
@@ -102,7 +104,7 @@ export default function Projects() {
               <div className={styles.projectContent}>
                 <div className={styles.projectHeader}>
                   <div className={styles.projectIcon}>
-                    {project.type === 'live' ? '🌐' : '⚙'}
+                    {project.type === 'live' ? <HiGlobe /> : <HiCode />}
                   </div>
                   <h3>{project.title}</h3>
                 </div>
@@ -121,7 +123,7 @@ export default function Projects() {
                     rel="noopener noreferrer"
                     className={styles.projectLink}
                   >
-                    View Live →
+                    <FaExternalLinkAlt /> View Live
                   </a>
                 )}
                 {project.githubUrl && (
@@ -131,7 +133,7 @@ export default function Projects() {
                     rel="noopener noreferrer"
                     className={styles.projectLink}
                   >
-                    View Code →
+                    <FaGithub /> View Code
                   </a>
                 )}
               </div>

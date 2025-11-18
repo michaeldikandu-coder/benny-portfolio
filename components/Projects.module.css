@@ -65,6 +65,9 @@
 .projectIcon {
   font-size: 2rem;
   opacity: 0.9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .projectHeader h3 {
@@ -116,6 +119,9 @@
   position: relative;
   font-weight: 500;
   letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .projectLink::after {
@@ -161,12 +167,17 @@
 @media (max-width: 968px) {
   .projectsGrid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 }
 
 @media (max-width: 768px) {
   .projectContent {
     padding: 1.5rem;
+  }
+  
+  .projectHeader h3 {
+    font-size: 1.3rem;
   }
   
   .projectFooter {
@@ -177,5 +188,24 @@
   
   .projectLink {
     display: block;
+  }
+  
+  .viewMoreBtn {
+    padding: 0.8rem 2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projectContent {
+    padding: 1rem;
+  }
+  
+  .projectFooter {
+    padding: 1rem;
+  }
+  
+  .projectIcon {
+    font-size: 1.5rem;
   }
 }

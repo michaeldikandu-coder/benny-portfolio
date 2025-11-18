@@ -25,10 +25,11 @@ body {
   color: var(--white);
   overflow-x: hidden;
   line-height: 1.6;
+  padding-top: 70px;
 }
 
 section {
-  min-height: 100vh;
+  min-height: auto;
   display: flex;
   align-items: center;
   padding: 6rem 2rem;
@@ -49,6 +50,11 @@ section {
 
 @media (max-width: 768px) {
   section {
-    padding: 4rem 1.5rem;
+    padding: 3rem 1rem;
+    min-height: auto;
+  }
+  
+  .section-title {
+    margin-bottom: 2rem;
   }
 }

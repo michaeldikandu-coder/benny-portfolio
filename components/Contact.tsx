@@ -1,26 +1,33 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import { HiMail, HiPhone, HiDocumentText } from 'react-icons/hi'
+import { FaXTwitter, FaGithub } from 'react-icons/fa6'
 import styles from './Contact.module.css'
 
 const contacts = [
   {
-    icon: '✉',
+    icon: HiMail,
     text: 'dikandumichael@gmail.com',
     href: 'mailto:dikandumichael@gmail.com',
   },
   {
-    icon: '📱',
+    icon: HiPhone,
     text: '+234 706 699 3421',
     href: 'tel:+2347066993421',
   },
   {
-    icon: '𝕏',
+    icon: FaXTwitter,
     text: '@BlockVerse3235',
     href: 'https://x.com/BlockVerse3235',
   },
   {
-    icon: '📄',
+    icon: FaGithub,
+    text: 'GitHub: Michael262626',
+    href: 'https://github.com/Michael262626',
+  },
+  {
+    icon: HiDocumentText,
     text: 'Download Resume',
     href: '/michael-resume.pdf',
   },
@@ -55,20 +62,25 @@ export default function Contact() {
         <h2 className="section-title">Let&apos;s Connect</h2>
         <div className={styles.contactContent}>
           <div className={styles.contactLinks}>
-            {contacts.map((contact, index) => (
-              <a
-                key={index}
-                href={contact.href}
-                target={contact.href.startsWith('http') ? '_blank' : undefined}
-                rel={contact.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                download={contact.href.endsWith('.pdf') ? true : undefined}
-                className={`${styles.contactCard} ${visibleCards[index] ? styles.visible : ''}`}
-                style={{ transitionDelay: `${index * 0.2}s` }}
-              >
-                <span className={styles.contactIcon}>{contact.icon}</span>
-                <span className={styles.contactText}>{contact.text}</span>
-              </a>
-            ))}
+            {contacts.map((contact, index) => {
+              const IconComponent = contact.icon
+              return (
+                <a
+                  key={index}
+                  href={contact.href}
+                  target={contact.href.startsWith('http') ? '_blank' : undefined}
+                  rel={contact.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                  download={contact.href.endsWith('.pdf') ? true : undefined}
+                  className={`${styles.contactCard} ${visibleCards[index] ? styles.visible : ''}`}
+                  style={{ transitionDelay: `${index * 0.2}s` }}
+                >
+                  <span className={styles.contactIcon}>
+                    <IconComponent />
+                  </span>
+                  <span className={styles.contactText}>{contact.text}</span>
+                </a>
+              )
+            })}
           </div>
         </div>
       </div>
