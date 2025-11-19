@@ -1,35 +1,30 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import { HiMail, HiPhone, HiDocumentText } from 'react-icons/hi'
-import { FaXTwitter, FaGithub } from 'react-icons/fa6'
+import { HiMail, HiPhone } from 'react-icons/hi'
+import { FaGithub, FaInstagram } from 'react-icons/fa6'
 import styles from './Contact.module.css'
 
 const contacts = [
   {
     icon: HiMail,
-    text: 'dikandumichael@gmail.com',
-    href: 'mailto:dikandumichael@gmail.com',
+    text: 'benynouba@gmail.com',
+    href: 'mailto:benynouba@gmail.com',
   },
   {
     icon: HiPhone,
-    text: '+234 706 699 3421',
-    href: 'tel:+2347066993421',
+    text: '+234 812 647 7391',
+    href: 'tel:+2348126477391',
   },
   {
-    icon: FaXTwitter,
-    text: '@BlockVerse3235',
-    href: 'https://x.com/BlockVerse3235',
+    icon: FaInstagram,
+    text: '@iambenyfly',
+    href: 'https://www.instagram.com/iambenyfly',
   },
   {
     icon: FaGithub,
-    text: 'GitHub: Michael262626',
-    href: 'https://github.com/Michael262626',
-  },
-  {
-    icon: HiDocumentText,
-    text: 'Download Resume',
-    href: '/michael-resume.pdf',
+    text: 'GitHub: Noubata',
+    href: 'https://github.com/Noubata',
   },
 ]
 

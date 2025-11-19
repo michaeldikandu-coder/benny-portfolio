@@ -14,9 +14,9 @@ export default function Hero() {
     <section id="home" className={styles.hero}>
       <div className={`${styles.heroContent} ${isVisible ? styles.visible : ''}`}>
         <div className={styles.avatarContainer}>
-          <img src="/avatar.jpg" alt="Michael Dikandu" className={styles.avatar} />
+          <img src="/avatar.jpg" alt="Noubata Benoit" className={styles.avatar} />
         </div>
-        <h1 className={styles.glitch}>Michael Dikandu</h1>
+        <h1 className={styles.glitch}>Noubata Benoit</h1>
         <p className={styles.subtitle}>Software Engineer</p>
         <div className={styles.ctaButtons}>
           <a href="#contact" className={`${styles.btn} ${styles.btnPrimary}`}>

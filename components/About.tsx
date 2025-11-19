@@ -30,20 +30,20 @@ export default function About() {
         <h2 className="section-title">About Me</h2>
         <div className={`${styles.aboutContent} ${isVisible ? styles.visible : ''}`}>
           <div className={styles.imageContainer}>
-            <img src="/about-image.jpg" alt="Michael Dikandu" className={styles.aboutImage} />
+            <img src="/about-image.jpg" alt="Noubata Benoit" className={styles.aboutImage} />
           </div>
           <div className={styles.aboutTextContainer}>
             <div className={styles.codeSnippet}>
               <pre><code>{`const engineer = {
-  name: "Michael Dikandu",
-  role: "Mid Senior Software Engineer",
+  name: "Noubata Benoit",
+  role: "Software Engineer",
   passion: ["Clean Code", "Innovation"],
   mindset: "Problem Solver",
   approach: "User-Centric Design"
 };`}</code></pre>
             </div>
             <p className={styles.aboutText}>
-              Crafting elegant solutions to complex problems. With years of experience in software development, 
+              Crafting elegant solutions to complex problems. With 2 years of experience in software development,
               I specialize in building scalable applications and leading technical teams to success.
             </p>
           </div>

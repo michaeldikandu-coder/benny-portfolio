@@ -22,7 +22,7 @@ export default function Navbar() {
   return (
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.navContent}>
-        <div className={styles.logo}>MD</div>
+        <div className={styles.logo}>NB</div>
         
         <button 
           className={`${styles.hamburger} ${menuOpen ? styles.open : ''}`}
